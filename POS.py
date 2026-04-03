@@ -175,6 +175,9 @@ def payment(table_num, received_amount):
         table_status[table_number.index(table_num)] = 0                                     # 0: 빈 테이블로 변경
         payment_list.append({"table_num": table_num, "menu_item": menu_item, "price": pay}) # 결제 완료 리스트에 추가
 
+def remove_bracket(text):
+    return text.replace('[', '').replace(']', '').replace("{", "").replace("}", "").replace("(", "").replace(")", "")
+
 running = True
 
 display_table()                                                                  # 테이블 상태 표시
@@ -232,7 +235,7 @@ while True:
     elif command == 3:
         print("금일 판매 내역:")
         for payment in payment_list:
-            print(f"테이블 {payment['table_num']}: {payment['menu_item']} - {payment['price']:,}원")
+            print(f"테이블 {payment['table_num']}: {remove_bracket(str(payment['menu_item']))}    총 {payment['price']:,}원")
     elif command == 4:
         print("프로그램을 종료합니다.")
         break
