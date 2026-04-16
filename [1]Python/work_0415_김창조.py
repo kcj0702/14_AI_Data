@@ -156,16 +156,16 @@ print("="*25)
 #  25.8 심사문제: 딕셔너리에서 특정 값 삭제하기
 print("="*5, "25.8 심사문제", "="*5)
 
-# keys = input("키들을 입력하세요 >>>").split()
-# values = map(int, input("값들을 입력하세요 >>>").split())
-# x = dict(zip(keys, values))
-# key_30 = ""
-# for key, value in x.items():
-#     if value == 30:
-#         key_30 = key
-# del x['delta']
-# del x[key_30]
-# print(x)
+keys = input("키들을 입력하세요 >>>").split()
+values = map(int, input("값들을 입력하세요 >>>").split())
+x = dict(zip(keys, values))
+key_30 = ""
+for key, value in x.items():
+    if value == 30:
+        key_30 = key
+del x['delta']
+del x[key_30]
+print(x)
 
 print("="*25)
 # ======================================
