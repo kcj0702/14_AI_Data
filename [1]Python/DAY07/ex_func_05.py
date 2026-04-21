@@ -23,10 +23,14 @@ def get_grade(**scores):
 
     return grade
 
+# 해당 파일이 다른 파일에 import될 때는
+# 아래 코드가 실행되지 않음
+if __name__ == '__main__':
+    # --------------------------------------------------
+    # 함수 사용 즉, 함수 호출
+    # --------------------------------------------------
+    print(f"get_grade()                                 : {get_grade()}")
+    print(f"get_grade(kor=90, dance=80)                 : {get_grade(kor=90, dance=80)}")
+    print(f"get_grade(sci=100, art=40, math=90, phy=50) : {get_grade(sci=100, art=40, math=90, phy=50)}")
 
-# --------------------------------------------------
-# 함수 사용 즉, 함수 호출
-# --------------------------------------------------
-print(f"get_grade()                                 : {get_grade()}")
-print(f"get_grade(kor=90, dance=80)                 : {get_grade(kor=90, dance=80)}")
-print(f"get_grade(sci=100, art=40, math=90, phy=50) : {get_grade(sci=100, art=40, math=90, phy=50)}")
+    print(f"매직/스페셜 변수 __name__                   : {__name__}")
