@@ -1,2 +1,0 @@
-"[2]Pandas/DATA/mnist_train.csv" 
-"*.csv"   # 모든 CSV 제외 (선택)
