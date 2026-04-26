@@ -65,13 +65,13 @@ def ispossible(key_pad:str):
     x, y = cursor
     car_dir = ''
 
-    def get_safe(x, y, matrix):                                             # x+1, x-1, y+1, y-1이 행렬의 범위를 넘어가지 않도록 하는 내부 함수
+    def get_safe(x, y, matrix):                                         # x+1, x-1, y+1, y-1이 행렬의 범위를 넘어가지 않도록 하는 내부 함수
         return matrix[x][y] if 0 <= x < len(matrix[0]) and 0 <= y < len(matrix) else None
     
-    temp = [get_safe(x+dx, y+dy, matrix) for dx, dy in vec]          # wsda의 방향 순서대로 커서 주변 4칸의 값들의 리스트
+    temp = [get_safe(x+dx, y+dy, matrix) for dx, dy in vec]             # wsda의 방향 순서대로 커서 주변 4칸의 값들의 리스트
     car_dir_idx = temp.index(car_num)
-    car_dir = '82' if car_dir_idx == 0 or car_dir_idx == 1 else '64'        # 차량의 방향 판별
-    if key_pad in car_dir:                                                     # 입력값 필터
+    car_dir = '82' if car_dir_idx == 0 or car_dir_idx == 1 else '64'    # 차량의 방향 판별
+    if key_pad in car_dir:                                              # 입력값 필터
         car_dir = key_pad
         car_dir_idx = '8264'.find(key_pad)
         
