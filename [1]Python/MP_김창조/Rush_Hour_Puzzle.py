@@ -251,7 +251,7 @@ try:
                 print_screen('#_MATRIX')
             
             ismove = 1                                                      # 이동 중인지 아닌지 판별
-            while ismove and matrix[goal[0]][goal[1]] != 0:                  # 입력이 '0'이라면 선택으로 돌아가기
+            while ismove and matrix[goal[0]][goal[1]] != 0:                 # 입력이 '0'이라면 선택으로 돌아가기
                 if user_input.strip().lower() == 'stop':
                     break
                 user_input = input('차량 이동\n').strip()
